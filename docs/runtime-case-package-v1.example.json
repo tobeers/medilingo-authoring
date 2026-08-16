@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "caseID": "CASE-000123",
+  "caseVersion": 1,
+  "title": "Akuter Thoraxschmerz",
+  "initialPresentation": "58-jähriger Patient mit starken Thoraxschmerzen.",
+  "history": [
+    {"topicID":"symptom_onset","answer":"Seit etwa 45 Minuten.","importance":"core"}
+  ],
+  "procedures": [
+    {"procedureID":"blood_pressure","standardResult":"148/92 mmHg","variants":[],"importance":"core"}
+  ],
+  "diagnostics": [
+    {"procedureID":"ecg","defaultVariant":"standard","standardResult":"ST-Hebungen inferior.","standardTimeToResultMinutes":0,"standardMediaAssetID":null,"variants":[],"repeatable":false,"importance":"essential"}
+  ],
+  "treatments": [
+    {"actionID":"aspirin","medicationID":"aspirin","interventionID":null,"role":"essential","responseText":"ASS wurde verabreicht.","stateChanges":{}}
+  ],
+  "targetDiagnosisID":"inferior_stemi",
+  "hints":["Welche Untersuchung sollte sofort erfolgen?"],
+  "timeline":[],
+  "completion":{
+    "diagnosticRequired":["target_diagnosis_identified"],
+    "treatmentRequired":["aspirin"],
+    "fullRequired":["target_diagnosis_identified","aspirin"]
+  },
+  "endpointPolicy":{"mode":"diagnosis_and_treatment"},
+  "scoring":{"diagnosisXP":40,"treatmentXP":60,"hintPenaltyXP":10,"nonCoreGraceCount":3,"nonCoreMaxPenaltyXP":20,"nonCorePenaltyRate":0.1}
+}
