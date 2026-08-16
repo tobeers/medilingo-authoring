@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import StudioWrapper from './StudioWrapper';
-import DeviceTestPublish from './DeviceTestPublish';
 import './styles.css';
 import './workbench.css';
 import './studio.css';
@@ -9,6 +8,5 @@ import './studio.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <StudioWrapper />
-    <DeviceTestPublish />
   </React.StrictMode>,
 );
